@@ -73,7 +73,7 @@ export default function Index() {
             <View className="flex-start">
               <Text className="small-bold text-primary">DELIVER TO</Text>
               <TouchableOpacity className="flex-center flex-row gap-1 mt-0.5">
-                <Text className="small-bold text-dark-100">Croatia</Text>
+                <Text className="small-bold text-dark-100">Nigeria</Text>
                 <Image
                   source={images.arrowDown}
                   className="size-3"
