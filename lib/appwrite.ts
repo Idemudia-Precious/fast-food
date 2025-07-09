@@ -6,8 +6,13 @@ export const appwriteConfig = {
   projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID!,
   platform: "com.presh.foodordering",
   databaseId: "686d20fb000adb48c2bd",
+  bucketId: "686e4ed600247954adb8",
+  
   userCollectionId: "686d2128002dd0e2bf09",
-
+  categoriesCollectionId: "686e394d003ad6f488d3",
+  menuCollectionId: "686e4ba500167e9b5bf7",
+  customizationsCollectionId: "686e4cf1002743e7b7de",
+  menuCustomizationCollectionId: "686e4de1000476865f51",
 }
 
 export const client = new Client();
