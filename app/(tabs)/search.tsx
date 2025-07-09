@@ -32,7 +32,7 @@ const Search = () => {
     refetch({ category, query, limit: 6 });
   }, [category, query]);
 
-  console.log(data);
+  //console.log(data);
   return (
     <SafeAreaView className="bg-white h-full">
       <FlatList
