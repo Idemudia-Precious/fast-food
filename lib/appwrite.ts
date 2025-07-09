@@ -57,23 +57,23 @@ export const signIn = async ({ email, password }: { email: string; password: str
 }
 
 export const getCurrentUser = async () => {
-    try {
-        const currentAccount = await account.get();
-        if(!currentAccount) throw Error;
+  try {
+    const currentAccount = await account.get();
+    if (!currentAccount) throw Error;
 
-        const currentUser = await databases.listDocuments(
-            appwriteConfig.databaseId,
-            appwriteConfig.userCollectionId,
-            [Query.equal('accountId', currentAccount.$id)]
-        )
+    const currentUser = await databases.listDocuments(
+      appwriteConfig.databaseId,
+      appwriteConfig.userCollectionId,
+      [Query.equal('accountId', currentAccount.$id)]
+    )
 
-        if(!currentUser) throw Error;
+    if (!currentUser) throw Error;
 
-        return currentUser.documents[0];
-    } catch (e) {
-        console.log(e);
-        throw new Error(e as string);
-    }
+    return currentUser.documents[0];
+  } catch (e) {
+    console.log(e);
+    throw new Error(e as string);
+  }
 }
 
 export const getMenu = async ({ category, query }: GetMenuParams) => {
@@ -103,10 +103,10 @@ export const getCategories = async () => {
     const categories = await databases.listDocuments(
       appwriteConfig.databaseId,
       appwriteConfig.categoriesCollectionId,
-      //[Query.orderAsc("name")]
-    );
-    return categories.documents;  
+    )
+
+    return categories.documents;
   } catch (e) {
     throw new Error(e as string);
-  } 
+  }
 }
