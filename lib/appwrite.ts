@@ -1,5 +1,5 @@
 import { CreateUserParams, GetMenuParams } from "@/type";
-import { Account, Avatars, Client, Databases, ID, Query, Storage } from "react-native-appwrite"
+import { Account, Avatars, Client, Databases, ID, Query, Storage } from "react-native-appwrite";
 
 export const appwriteConfig = {
   endpoint: process.env.EXPO_PUBLIC_APPWRITE_ENDPOINT!,
@@ -110,3 +110,11 @@ export const getCategories = async () => {
     throw new Error(e as string);
   }
 }
+
+export const logout = async () => {
+  try {
+    await account.deleteSession('current');
+  } catch (e) {
+    throw new Error(e as string);
+  }
+};

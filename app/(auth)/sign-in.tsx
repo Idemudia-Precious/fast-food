@@ -64,10 +64,10 @@ const SignIn = () => {
 
       <View className="flex justify-center mt-5 flex-row gap-2">
         <Text className="base-regular text-gray-100">
-          Don&apos;t have an account?
+          Don&apos;t have an account ?
         </Text>
         <Link href="/sign-up" className="base-bold text-primary">
-          Sign Up
+          Sign Up .
         </Link>
       </View>
     </View>
